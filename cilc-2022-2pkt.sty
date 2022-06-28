@@ -1,0 +1,46 @@
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+% \usepackage{fancyvrb}
+\usepackage{multicol}
+% \usepackage{caption}
+\usepackage{code-listings}
+\usepackage{wasysym}
+\usepackage[yyyymmdd]{datetime}
+
+\renewcommand{\dateseparator}{}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newenvironment{lp}{\begin{center}\ttfamily}{\end{center}}
+\newenvironment{lplist}{\begin{itemize}\ttfamily}{\end{itemize}}
+
+\newcommand{\twopkt}{\textsc{2P-Kt}}
+\newcommand{\deeplearningforj}{DeepLearning4J}
+\newcommand{\dlfj}{DL4J}
+\newenvironment{inlinelist}{\begin{enumerate*}[label=\emph{(\roman{*})}]}{\end{enumerate*}}
+\newcommand{\mllib}{ML-Lib}
+\newcommand{\module}[1]{\texttt{:#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSection[]
+{
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}<beamer>[c,noframenumbering]
+\frametitle{Next in Line\ldots}
+\tableofcontents[sectionstyle=show/shaded,subsectionstyle=hide]
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+}
+\AtBeginSubsection[]
+{
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}<beamer>[noframenumbering]
+    \frametitle{Focus on\ldots}
+    \mbox{~}
+    \tableofcontents[currentsubsection,sectionstyle=shaded,subsectionstyle=show/shaded]
+    \mbox{~}
+\end{frame}
+%\\\\\\\\\\\\\\\\\\\\\
+}
